@@ -16,7 +16,7 @@ export class ToDoItemComponent implements OnInit {
 
   // Set Dynamic Classes
   setClasses() {
-    let classes = {
+    const classes = {
       todo: true,
       'is-complete': this.todo.completed
     };
@@ -25,7 +25,7 @@ export class ToDoItemComponent implements OnInit {
   }
 
   onToggle(todo) {
-    console.log('toggle');
+    todo.completed = !todo.completed;
   }
 
   onDelete(todo) {
