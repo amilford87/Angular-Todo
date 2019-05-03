@@ -26,7 +26,7 @@ export class TodoComponent implements OnInit {
   }
 
   addTodo(todo: Todo) {
-    this.todoService.addTodo().subscribe(todo => {
+    this.todoService.addTodo(todo).subscribe(todo => {
       this.todos.push(todo);
     });
   }
